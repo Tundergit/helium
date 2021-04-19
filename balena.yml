@@ -1,8 +1,27 @@
 
-applicationEnvironmentVariables:
-    - LORA_REGION: EU868
+name: rak-miner
+type: sw.application
+description: >-
+  rak-miner-development
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/Tundergit/helium'
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://raw.githubusercontent.com/balenalabs/balena-sound/master/logo.png
+data:
+  applicationEnvironmentVariables:
+    - LORA_REGION: US915
     - LORA_UDP: 1680
     - SPI_SPEED: 200000
     - PIN_RESET: 11
     - MINER_URL: miner-helium
-    - MODEL: RAK2245
+    - MODEL: RAK2287
+  defaultDeviceType: raspberry-pi
+  supportedDeviceTypes:
+    - raspberrypi4-64
+version: 0.0.1
